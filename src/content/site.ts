@@ -393,10 +393,14 @@ export const galleryTrainingsraum = {
   title: "Unser Trainingsraum",
   description: "Einblicke in die Akademie in der Gottlieb-Daimler-Straße 8, Stutensee.",
   images: [
-    { src: "/images/trainingsraum/raum-1.jpg", alt: "Trainingsraum Stutensee" },
-    { src: "/images/trainingsraum/raum-2.jpg", alt: "Trainingsraum Stutensee" },
-    { src: "/images/trainingsraum/raum-3.jpg", alt: "Trainingsraum Stutensee" },
-    { src: "/images/trainingsraum/raum-4.jpg", alt: "Trainingsraum Stutensee" },
+    {
+      src: "/images/trainingsraum/raum-1.jpg",
+      alt: "Trainingsraum — Überblick mit Spiegelwand und Holzpuppen",
+    },
+    {
+      src: "/images/trainingsraum/raum-2.jpg",
+      alt: "Trainingsraum — Blick zur Holzpuppen-Wand",
+    },
   ],
 } as const;
 

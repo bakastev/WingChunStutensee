@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ImageLightboxGrid } from "@/components/gallery/image-lightbox-grid";
 import { Hero } from "@/components/sections/hero";
 import { ValuesBand } from "@/components/sections/values-band";
 import { ContactForm } from "@/components/forms/contact-form";
@@ -7,7 +8,13 @@ import { OsmEmbed } from "@/components/maps/osm-embed";
 import { ButtonLink } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
-import { benefits, ctaPanel, schedule, site } from "@/content/site";
+import {
+  benefits,
+  ctaPanel,
+  galleryTrainingsraum,
+  schedule,
+  site,
+} from "@/content/site";
 
 export default function HomePage() {
   return (
@@ -217,38 +224,32 @@ export default function HomePage() {
 
       <Section tone="muted" pad="lg" aria-labelledby="room-heading">
         <Container>
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="font-sans text-[0.6875rem] font-medium uppercase tracking-[0.28em] text-yellow-500">
-                Akademie
-              </p>
-              <h2
-                id="room-heading"
-                className="mt-3 font-display text-[clamp(1.75rem,3.5vw,2.5rem)] leading-[1.12] tracking-[-0.02em]"
-              >
-                Unser Trainingsraum
-              </h2>
-            </div>
-            <ButtonLink href="/galerie" variant="arrow">
-              Zur Galerie
-            </ButtonLink>
+          <div>
+            <p className="font-sans text-[0.6875rem] font-medium uppercase tracking-[0.28em] text-yellow-500">
+              Akademie
+            </p>
+            <h2
+              id="room-heading"
+              className="mt-3 font-display text-[clamp(1.75rem,3.5vw,2.5rem)] leading-[1.12] tracking-[-0.02em]"
+            >
+              Unser Trainingsraum
+            </h2>
+            <p className="mt-4 max-w-xl text-[0.9875rem] leading-[1.7] text-foreground-muted">
+              {galleryTrainingsraum.description}
+            </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-4">
-            {[1, 2, 3, 4].map((n) => (
-              <div
-                key={n}
-                className="relative aspect-[4/3] overflow-hidden bg-surface-band"
-              >
-                <Image
-                  src={`/images/trainingsraum/raum-${n}.jpg`}
-                  alt={`Trainingsraum Stutensee ${n}`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 50vw, 25vw"
-                />
-              </div>
-            ))}
+          <ImageLightboxGrid
+            images={galleryTrainingsraum.images}
+            caption={galleryTrainingsraum.title}
+            className="mt-10 grid-cols-1 sm:grid-cols-2"
+            sizes="(max-width: 640px) 100vw, 50vw"
+          />
+
+          <div className="mt-8">
+            <ButtonLink href="/galerie" variant="arrow">
+              Zur Bildergalerie
+            </ButtonLink>
           </div>
         </Container>
       </Section>
