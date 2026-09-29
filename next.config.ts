@@ -10,6 +10,11 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      {
+        source: "/.well-known/llms.txt",
+        destination: "/llms.txt",
+        permanent: false,
+      },
       { source: "/wingchun", destination: "/", permanent: true },
       { source: "/wingchun/", destination: "/", permanent: true },
       { source: "/wingchun/wingchun.php", destination: "/wing-chun", permanent: true },
