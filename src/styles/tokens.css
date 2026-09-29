@@ -1,0 +1,142 @@
+/* Wing Chun Stutensee — Primitive Design Tokens
+   Dark theme with yellow accent (#FACF48). */
+
+@theme {
+  /* ——— Yellow scale (accent / action) ——— */
+  --color-yellow-50: #fffbeb;
+  --color-yellow-100: #fff3c4;
+  --color-yellow-200: #ffe68a;
+  --color-yellow-300: #fdd860;
+  --color-yellow-400: #fcd652;
+  --color-yellow-500: #facf48;
+  --color-yellow-600: #e0b62e;
+  --color-yellow-700: #b8921a;
+  --color-yellow-800: #866b12;
+  --color-yellow-900: #57460c;
+  --color-yellow-950: #2f2506;
+
+  /* ——— Ink scale (text / dark surfaces) ——— */
+  --color-ink-50: #f7f7f6;
+  --color-ink-100: #ececeb;
+  --color-ink-200: #d4d4d2;
+  --color-ink-300: #a8a8a5;
+  --color-ink-400: #6e6e6b;
+  --color-ink-500: #3e3e3c;
+  --color-ink-600: #2a2a28;
+  --color-ink-700: #1a1a1a;
+  --color-ink-800: #111111;
+  --color-ink-900: #0d0d0d;
+  --color-ink-950: #070707;
+
+  /* ——— Paper / stone (light surfaces) ——— */
+  --color-paper-50: #ffffff;
+  --color-paper-100: #fafaf8;
+  --color-paper-200: #f5f4f2;
+  --color-paper-300: #f1f0ec;
+  --color-paper-400: #e9e8e6;
+  --color-paper-500: #e5e4e2;
+  --color-paper-600: #cfcfcb;
+
+  /* ——— Radius: sharp edges everywhere ——— */
+  --radius-none: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-2xl: 0;
+  --radius-3xl: 0;
+  --radius-full: 0;
+
+  /* ——— Spacing (4px base) ——— */
+  --spacing-0: 0;
+  --spacing-px: 1px;
+  --spacing-0_5: 0.125rem;
+  --spacing-1: 0.25rem;
+  --spacing-1_5: 0.375rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-14: 3.5rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  --spacing-28: 7rem;
+  --spacing-32: 8rem;
+  --spacing-rail: 11rem;
+
+  /* ——— Typography sizes ——— */
+  --text-eyebrow: 0.6875rem;
+  --text-eyebrow--line-height: 1.2;
+  --text-eyebrow--letter-spacing: 0.18em;
+  --text-eyebrow--font-weight: 500;
+
+  --text-caption: 0.75rem;
+  --text-caption--line-height: 1.4;
+  --text-caption--letter-spacing: 0.12em;
+
+  --text-nav: 0.8125rem;
+  --text-nav--line-height: 1.2;
+  --text-nav--letter-spacing: 0.08em;
+
+  --text-body-sm: 0.875rem;
+  --text-body-sm--line-height: 1.65;
+
+  --text-body: 1rem;
+  --text-body--line-height: 1.7;
+
+  --text-lead: 1.125rem;
+  --text-lead--line-height: 1.65;
+
+  --text-h4: 1.25rem;
+  --text-h4--line-height: 1.3;
+  --text-h4--font-weight: 500;
+
+  --text-h3: clamp(1.375rem, 1.2rem + 0.6vw, 1.75rem);
+  --text-h3--line-height: 1.25;
+  --text-h3--font-weight: 500;
+
+  --text-h2: clamp(1.75rem, 1.4rem + 1.2vw, 2.5rem);
+  --text-h2--line-height: 1.15;
+  --text-h2--font-weight: 500;
+
+  --text-h1: clamp(2.25rem, 1.6rem + 2.4vw, 3.75rem);
+  --text-h1--line-height: 1.05;
+  --text-h1--font-weight: 500;
+
+  --text-display: clamp(2.375rem, 1.55rem + 3.2vw, 4.5rem);
+  --text-display--line-height: 1.02;
+  --text-display--font-weight: 500;
+
+  --text-quote: clamp(1.25rem, 1.1rem + 0.8vw, 1.875rem);
+  --text-quote--line-height: 1.35;
+
+  /* ——— Shadows: intentionally empty (depth via contrast) ——— */
+  --shadow-none: 0 0 #0000;
+  --shadow-sm: 0 0 #0000;
+  --shadow-md: 0 0 #0000;
+  --shadow-lg: 0 0 #0000;
+
+  /* ——— Motion ——— */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out-soft: cubic-bezier(0.45, 0, 0.55, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+
+  /* ——— Layout ——— */
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 90rem;
+
+  --max-width-narrow: 44rem;
+  --max-width-content: 72rem;
+  --max-width-wide: 80rem;
+  --max-width-shell: 110rem;
+}

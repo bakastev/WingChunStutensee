@@ -1,0 +1,60 @@
+/* Wing Chun Stutensee — Semantic roles (Dark Theme + Gelb) */
+
+@theme inline {
+  /* Surfaces — dark by default */
+  --color-background: var(--color-ink-950);
+  --color-surface: var(--color-ink-900);
+  --color-surface-muted: var(--color-ink-800);
+  --color-surface-subtle: var(--color-ink-700);
+  --color-surface-band: var(--color-ink-800);
+  --color-surface-elevated: var(--color-ink-700);
+  /* Light contrast panels (forms, rare highlights) */
+  --color-surface-inverse: var(--color-paper-100);
+  --color-surface-inverse-soft: var(--color-paper-200);
+  --color-surface-rail: var(--color-ink-800);
+  --color-surface-accent: var(--color-yellow-500);
+
+  /* Foreground — light text on dark */
+  --color-foreground: var(--color-paper-100);
+  --color-foreground-muted: color-mix(
+    in srgb,
+    var(--color-paper-100) 68%,
+    transparent
+  );
+  --color-foreground-subtle: color-mix(
+    in srgb,
+    var(--color-paper-100) 48%,
+    transparent
+  );
+  /* Text on light inverse panels */
+  --color-foreground-inverse: var(--color-ink-900);
+  --color-foreground-inverse-muted: color-mix(
+    in srgb,
+    var(--color-ink-900) 72%,
+    transparent
+  );
+
+  /* Accent — yellow; dark ink on yellow CTAs */
+  --color-accent: var(--color-yellow-500);
+  --color-accent-hover: var(--color-yellow-400);
+  --color-accent-strong: var(--color-yellow-400);
+  --color-accent-soft: var(--color-yellow-600);
+  --color-accent-foreground: var(--color-ink-900);
+
+  /* Borders */
+  --color-border: color-mix(in srgb, var(--color-paper-50) 14%, transparent);
+  --color-border-strong: color-mix(in srgb, var(--color-paper-50) 28%, transparent);
+  --color-border-inverse: color-mix(in srgb, var(--color-ink-900) 18%, transparent);
+  --color-border-accent: var(--color-yellow-500);
+
+  /* Focus */
+  --color-ring: var(--color-yellow-400);
+  --color-ring-inverse: var(--color-yellow-700);
+
+  /* Font families */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-quote: var(--font-cormorant), ui-serif, Georgia, serif;
+  --font-cjk: "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC",
+    "Noto Serif SC", "STSong", serif;
+}
