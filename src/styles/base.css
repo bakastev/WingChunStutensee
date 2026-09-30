@@ -37,6 +37,21 @@
     text-wrap: balance;
   }
 
+  /* Light admin CMS — headings must not inherit public dark-theme white */
+  .admin-theme {
+    color: #09090b;
+    color-scheme: light;
+  }
+
+  .admin-theme h1,
+  .admin-theme h2,
+  .admin-theme h3,
+  .admin-theme h4 {
+    color: #09090b;
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+
   p {
     text-wrap: pretty;
   }

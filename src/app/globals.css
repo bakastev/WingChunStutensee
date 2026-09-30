@@ -2,3 +2,40 @@
 @import "../styles/tokens.css";
 @import "../styles/semantic.css";
 @import "../styles/base.css";
+
+/* Admin CMS is light — override dark-theme heading/body colors from base.css */
+.admin-theme {
+  color: #09090b;
+  color-scheme: light;
+}
+
+.admin-theme h1,
+.admin-theme h2,
+.admin-theme h3,
+.admin-theme h4 {
+  color: #09090b;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.admin-theme a {
+  color: inherit;
+}
+
+/* TipTap admin editor */
+.tiptap p.is-editor-empty:first-child::before,
+.ProseMirror p.is-empty:first-child::before {
+  color: #a1a1aa;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.ProseMirror:focus {
+  outline: none;
+}
+
+.admin-theme .ProseMirror {
+  color: #18181b;
+}

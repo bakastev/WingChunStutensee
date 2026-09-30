@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { ConvexClientProvider } from "@/components/providers/convex-provider";
-import { SiteFooter } from "@/components/layout/site-footer";
-import { SiteHeader } from "@/components/layout/site-header";
 import { SiteJsonLd } from "@/components/seo/site-json-ld";
 import { fontVariables } from "@/lib/fonts";
 import { site } from "@/content/site";
@@ -102,21 +100,9 @@ export const viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="de" className={`${fontVariables} h-full overflow-x-clip antialiased`}>
-      <body className="flex min-h-full flex-col overflow-x-clip bg-background font-sans text-foreground">
+      <body className="flex min-h-full flex-col overflow-x-clip font-sans antialiased">
         <SiteJsonLd />
-        <ConvexClientProvider>
-          <a
-            href="#inhalt"
-            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-accent focus:px-5 focus:py-3 focus:font-sans focus:text-[0.75rem] focus:uppercase focus:tracking-[0.16em] focus:text-accent-foreground"
-          >
-            Zum Inhalt springen
-          </a>
-          <SiteHeader />
-          <main id="inhalt" className="flex-1">
-            {children}
-          </main>
-          <SiteFooter />
-        </ConvexClientProvider>
+        <ConvexClientProvider>{children}</ConvexClientProvider>
       </body>
     </html>
   );
