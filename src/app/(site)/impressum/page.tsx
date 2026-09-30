@@ -64,6 +64,22 @@ export default function ImpressumPage() {
               einer Verbraucherschlichtungsstelle teilzunehmen.
             </p>
           </div>
+          <div>
+            <h2 className="font-display text-h3 text-foreground">Entwicklung</h2>
+            <p className="mt-3">
+              Entwickelt von:{" "}
+              <a
+                href={site.developer.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground underline hover:text-accent"
+              >
+                {site.developer.label}
+              </a>
+              {" — "}
+              {site.developer.tagline}
+            </p>
+          </div>
         </Container>
       </Section>
     </>

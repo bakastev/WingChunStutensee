@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { CookieSettingsButton } from "@/components/legal/cookie-settings-button";
 import { Wordmark } from "@/components/marks/wordmark";
 import { gutter } from "@/components/ui/container";
 import { navigation, site } from "@/content/site";
@@ -107,31 +108,47 @@ export function SiteFooter() {
       <div className="bg-background text-foreground">
         <div
           className={cn(
-            "mx-auto flex max-w-shell flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:py-5",
+            "mx-auto flex max-w-shell flex-col gap-4 py-4 sm:py-5",
             gutter,
           )}
         >
-          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-5 sm:gap-y-2">
-            <p className="font-sans text-[0.6875rem] tracking-[0.08em] text-foreground-subtle">
-              © {new Date().getFullYear()} {site.name}
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-5 sm:gap-y-2">
+              <p className="font-sans text-[0.6875rem] tracking-[0.08em] text-foreground-subtle">
+                © {new Date().getFullYear()} {site.name}
+              </p>
+              <nav
+                aria-label="Rechtliches"
+                className="flex flex-wrap items-center gap-x-4 gap-y-1 sm:border-l sm:border-border sm:pl-5"
+              >
+                {legalLinks.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="font-sans text-[0.6875rem] tracking-[0.08em] text-foreground-subtle transition-colors hover:text-accent"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <CookieSettingsButton />
+              </nav>
+            </div>
+            <p className="font-sans text-[0.6875rem] uppercase tracking-[0.16em] text-foreground-subtle">
+              {site.slogan}
             </p>
-            <nav
-              aria-label="Rechtliches"
-              className="flex flex-wrap items-center gap-x-4 gap-y-1 sm:border-l sm:border-border sm:pl-5"
-            >
-              {legalLinks.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="font-sans text-[0.6875rem] tracking-[0.08em] text-foreground-subtle transition-colors hover:text-accent"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
           </div>
-          <p className="font-sans text-[0.6875rem] uppercase tracking-[0.16em] text-foreground-subtle">
-            {site.slogan}
+          <p className="font-sans text-[0.6875rem] tracking-[0.06em] text-foreground-subtle">
+            Entwickelt von:{" "}
+            <a
+              href={site.developer.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground-muted transition-colors hover:text-accent"
+            >
+              {site.developer.label}
+            </a>
+            {" — "}
+            {site.developer.tagline}
           </p>
         </div>
       </div>

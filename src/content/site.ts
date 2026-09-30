@@ -47,6 +47,11 @@ export const site = {
     facebook:
       "https://www.facebook.com/Wing-Chun-Akademie-Stutensee-Sp%C3%B6ck-384000235093271",
   },
+  developer: {
+    label: "modern-stack.de",
+    href: "https://modern-stack.de",
+    tagline: "Websites für die KI-Ära",
+  },
   footerClaim: "Lerne Dich zu verteidigen",
 } as const;
 
